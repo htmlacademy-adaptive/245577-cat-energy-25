@@ -1,0 +1,39 @@
+.input {
+  .oswald-400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @grey;
+  text-transform: uppercase;
+  border: 1px solid #e7e7e7;
+  border-radius: 0;
+  background: none;
+  width: 3em;
+  padding: 13px 14px 12px;
+  flex-grow: 1;
+}
+
+@-moz-document url-prefix("") {
+  .input {
+    padding-bottom: 6px;
+  }
+}
+
+.input:focus {
+  outline: 2px solid @grey;
+}
+
+.input:hover {
+  border-color: #cdcdcd;
+}
+
+.input:invalid {
+  outline: 2px solid #ff8282;
+}
+
+@media (min-width: @tablet-width) {
+  .input {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 17px 11px;
+  }
+}
