@@ -1,0 +1,47 @@
+.overall {
+  .oswald-400;
+  font-size: 14px;
+  line-height: 20px;
+  color: @black;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .overall {
+    font-size: 20px;
+    line-height: 20px;
+    width: 175px;
+    min-height: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 0;
+    text-align: end;
+  }
+
+  .overall__value:nth-child(2) {
+    margin-top: -15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .overall {
+    width: 330px;
+    margin-left: 0;
+    justify-content: space-between;
+    text-align: start;
+  }
+
+  .overall__value:nth-child(1) {
+    max-width: 55%;
+  }
+
+  .overall__value:nth-child(2) {
+    max-width: 40%;
+    margin-top: 0;
+  }
+}

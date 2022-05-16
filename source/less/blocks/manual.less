@@ -1,0 +1,146 @@
+.manual__container {
+  .align-center;
+  width: 280px;
+  padding-bottom: 29px;
+}
+
+.manual-title {
+  font-size: 36px;
+  line-height: 40px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.manual__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  margin-bottom: 20px;
+}
+
+.manual__item {
+  display: flex;
+  align-items: center;
+}
+
+.manual__description {
+  margin: 0;
+  display: inline-block;
+  max-width: 198px;
+}
+
+.manual__icon {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 20px;
+}
+
+.manual__icon--leaf {
+  background-image: url("../img/icon-leaf.svg");
+}
+
+.manual__icon--boiling {
+  background-image: url("../img/icon-boiling.svg");
+}
+
+.manual__icon--diet {
+  background-image: url("../img/icon-diet.svg");
+}
+
+.manual__icon--clock {
+  background-image: url("../img/icon-clock.svg");
+}
+
+.manual__item-number {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .manual {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .manual__container {
+    width: 708px;
+    padding-bottom: 47px;
+  }
+
+  .manual-title {
+    font-size: 60px;
+    line-height: 60px;
+    margin-top: 15px;
+    margin-bottom: 32px;
+  }
+
+  .manual__list {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    column-gap: 65px;
+    row-gap: 37px;
+    margin-bottom: 0;
+  }
+
+  .manual__item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 40px;
+    padding-bottom: 57px;
+    position: relative;
+    justify-self: start;
+  }
+
+  .manual__description {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 245px;
+  }
+
+  .manual__icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 0;
+    margin-bottom: 31px;
+  }
+
+  .manual__item-number {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    .oswald-400;
+    font-size: 280px;
+    line-height: 280px;
+    color: @light-grey;
+    z-index: -1;
+  }
+
+  .manual__item:first-child .manual__item-number {
+    right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .manual {
+    border-bottom: none;
+  }
+
+  .manual__container {
+    width: 1220px;
+    padding-bottom: 26px;
+    padding-top: 36px;
+  }
+
+  .manual-title {
+    margin-top: 11px;
+  }
+
+  .manual__list {
+    grid-template-columns: auto auto auto auto;
+    column-gap: 77px;
+  }
+}

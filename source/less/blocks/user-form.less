@@ -1,0 +1,47 @@
+.user-form {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 13px;
+}
+
+.user-form__field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.user-form__field-label {
+  .oswald-400;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin-right: 12px;
+  word-break: keep-all;
+}
+
+@media (min-width: @tablet-width) {
+  .user-form {
+    padding-bottom: 52px;
+  }
+
+  .user-form__field {
+    margin-bottom: 20px;
+  }
+
+  .user-form__field-label {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .user-form {
+    width: 570px;
+    padding: 0;
+  }
+
+  .user-form__field-label {
+    margin-right: 18px;
+  }
+}

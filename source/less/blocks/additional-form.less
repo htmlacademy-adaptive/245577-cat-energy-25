@@ -1,0 +1,118 @@
+.additional-form {
+  .align-center;
+  width: 280px;
+}
+
+.additional-form__container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.additional-form__field {
+  min-height: 26px;
+  width: auto;
+  margin-bottom: 17px;
+  position: relative;
+  display: block;
+  padding-left: 45px;
+  cursor: pointer;
+}
+
+.additional-form__field:last-child {
+  margin-bottom: 0;
+}
+
+.additional-form__field:hover .additional-form__field-mark {
+  border-color: #bababa;
+}
+
+.additional-form__field-control:disabled + .additional-form__field-mark,
+.additional-form__field-control:disabled + .additional-form__field-mark + .additional-form__field-label {
+  cursor: default;
+  opacity: 0.3;
+}
+
+.additional-form__field-control[type="checkbox"]:checked + .additional-form__field-mark::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 19px;
+  height: 15px;
+  background-image: url("../img/v-sign.svg");
+  background-repeat: no-repeat;
+  background-size: 19px 15px;
+}
+
+.additional-form__field-mark {
+  position: absolute;
+  top: -30%;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #cdcdcd;
+}
+
+.additional-form__field-label {
+  .oswald-400;
+  font-size: 16px;
+  line-height: 18px;
+  color: @black;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .additional-form {
+    width: 708px;
+  }
+
+  .additional-form__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    margin-bottom: 0;
+  }
+
+  .additional-form__field {
+    margin-bottom: 41px;
+    padding-left: 60px;
+  }
+
+  .additional-form__field-control[type="checkbox"]:checked + .additional-form__field-mark::before {
+    top: 50%;
+    width: 24px;
+    height: 18px;
+    background-size: 24px 18px;
+  }
+
+  .additional-form__field-mark {
+    width: 40px;
+    height: 40px;
+    top: -20%;
+  }
+
+  .additional-form__field-label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .additional-form {
+    width: 1220px;
+  }
+
+  .additional-form__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 40px;
+    align-content: center;
+  }
+
+  .additional-form__field {
+    margin: 0;
+  }
+}

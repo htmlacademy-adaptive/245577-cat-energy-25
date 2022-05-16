@@ -1,0 +1,29 @@
+.footer-social__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social__link {
+  width: 28px;
+  height: 22px;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+.footer-social__link:hover svg {
+  fill: @green;
+}
+
+.footer-social__link:active svg {
+  opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .footer-social__list {
+    margin-left: 25px;
+  }
+}
